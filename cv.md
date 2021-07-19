@@ -1,4 +1,4 @@
-####CV Alena Veremeenko
+#**CV Alena Veremeenko**#
 
 1.Alena Veremeenko
 2.email adress: alenaveremeenko2001@gmail.com phone number: +37529577118
@@ -98,6 +98,7 @@ public class Ad implements Serializable, Identifiable {
 }```
 
 Sample code on C++:
+
 ```#include <iostream>
 #include <time.h>
 
