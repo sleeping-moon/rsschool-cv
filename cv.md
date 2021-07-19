@@ -95,7 +95,8 @@ public class Ad implements Serializable, Identifiable {
             return false;
         return true;
     }
-}```
+}
+```
 
 Sample code on C++:
 
@@ -208,7 +209,8 @@ int main()
     cout << "Сумма :" << endl;
     cout << sum;
     X[0].deleteall(X);//удаление массива структур 
-}```
+}
+```
 6.
 7.I study at BSU.
 8.English level: A2+
