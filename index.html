@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>cvAV</title>
+<style>
+   .leftimg {
+    float:left; 
+    margin: 20px 20px 20px 20px; 
+   }
+   .center {
+    width: 650px; 
+    padding: 20px; 
+    margin: auto;
+    background:#ffffff;
+}
+   body{
+background:#76689a;
+}
+ .main-footer{
+width: 650px; 
+padding: 20px;
+margin: auto;
+}
+
+  </style>
+  </head>
+  <body >
+    <header>
+      <h1 align="center"style="color:#ffffff" >CV Alena Veremeenko </h1>
+    </header>
+    <main class="center" >
+     <div ><img src="https://sun9-49.userapi.com/impg/hm6P2-RMdyhXBy3F5WCLym_bAfVamkZHZbVmMQ/dWhIWErocAA.jpg?size=810x1080&quality=96&sign=266bcf987f937a3f7fa43bc713971890&type=album" alt=":(((((" width="274" height="350"class="leftimg" > 
+          
+     <div ><p><h3><strong> Contacts</strong></p></h3>
+      <span><p> <li>email adress: alenaveremeenko2001@gmail.com</li></p></span>
+      <span><p> <li>phone number: +37529577118</li></p></span></div>
+
+      <div ><p><h3><strong> About me</strong></p></h3>
+      <article>I study at BSU, Faculty of Radiophysics and Computer Technologies. My strengths are quick learning,communication and desire to learn </article></div>
+
+      <div ><p><h3><strong> Skills</strong></p></h3><ul>
+      <li><span><p>Java</p></span></li>
+      <li><span><p> C++</p></span></li>
+      <li><span><p>SOLID</p></span></li>
+      <li><span><p>OOP</p></span></li></div></ul>
+      <div ><p><h3><strong><ul> Sample code</strong></p></h3>
+      <p><h4><strong><li> Sample code on Java </strong></p></h4>
+<code><pre>package entity;
+
+import java.io.Serializable; 
+import java.util.Calendar; 
+import java.util.Date;
+
+public class Ad implements Serializable, Identifiable {
+
+private static final long serialVersionUID = -1777984074044025486L;
+private int id = 0;
+private String subject = "";
+private String body = "";
+private int authorId;
+transient private User author;
+private Long lastModified;
+transient private Date lastModifiedDate;
+
+public Ad() {
+    lastModified = Calendar.getInstance().getTimeInMillis();
+}
+
+public int getId() {
+    return id;
+}
+
+public void setId(int id) {
+    this.id = id;
+}
+
+public String getSubject() {
+    return subject;
+}
+
+public void setSubject(String subject) {
+    this.subject = subject;
+}
+
+public String getBody() {
+    return body;
+}
+
+public void setBody(String body) {
+    this.body = body;
+}
+
+public int getAuthorId() {
+    return authorId;
+}
+
+public void setAuthorId(int authorId) {
+    this.authorId = authorId;
+}
+
+public User getAuthor() {
+    return author;
+}
+
+public void setAuthor(User author) {
+    this.author = author;
+}
+
+public Long getLastModified() {
+    return lastModified;
+}
+
+public void setLastModified(Long lastModified) {
+    this.lastModified = lastModified;
+    lastModifiedDate = new Date(lastModified);
+}
+
+public Date getLastModifiedDate() {
+    return lastModifiedDate;
+}
+
+public int hashCode() {
+    return id;
+}
+
+public boolean equals(Object obj) {
+    if (this == obj)
+        return true;
+    if (obj == null)
+        return false;
+    if (getClass() != obj.getClass())
+        return false;
+    Ad other = (Ad) obj;
+    if (id != other.id)
+        return false;
+    return true;
+} }</li></pre></code>
+
+<p><h4><strong><li> Sample code on C++ </strong></p></h4>
+<code><pre>#include <time.h>
+
+using namespace std;
+
+class list
+{
+private:
+    class Node {
+        friend class list;
+        friend float addition(list* li);
+    private:
+        float data; 
+        Node* pptr;
+        Node* nptr;
+    public:
+        Node() {
+            (*this).data = 0;
+            (*this).pptr = NULL;
+            (*this).nptr = NULL;
+        }
+        Node(float data, Node* ptr,Node* next) {
+            (*this).data = data;
+            (*this).pptr = ptr;
+            (*this).nptr = next;
+        }
+    };
+    Node getnode;
+public:
+    void show()
+    {
+        Node* p;
+        p = &(*this).getnode;
+        do {
+            cout << (*p).data;
+            p = (*p).nptr;
+        } while ((*p).nptr != NULL);
+    }
+    void add(float data, list* last, list* next)
+    {
+        ((*this).getnode).data = data;
+        ((*this).getnode).pptr = &(*last).getnode;
+        ((*this).getnode).nptr = &(*next).getnode;
+    }
+    Node* search(float data)
+    {
+        Node* p;
+        p = &((*this).getnode);
+        do {
+            if ((*p).data == data) {
+                return p;
+            }
+            p = (*p).nptr;
+        } while ((*p).nptr != NULL);
+        return NULL;
+    }
+    char showdata()
+    {
+        return((*this).getnode).data;
+    }
+    void deleteo()
+    {
+        Node* f;
+        f = ((*this).getnode).pptr;
+        (*f).nptr = ((*this).getnode).nptr;
+        delete this;
+    }
+    void deleteall(list* p)
+    {
+        delete[] p;
+    }
+    friend float addition(list* li);
+};
+float addition(list* li)
+{
+    list p;
+    p.getnode = *((*li).getnode).nptr;
+    return (p.getnode).data + ((*li).getnode).data;
+}
+int main()
+{
+    srand(time(NULL));
+    setlocale(LC_ALL, "Russuan");
+    int size = 0, n;
+    int L2[100];
+    cout << "N:" << endl;
+    cin >> n;
+    list* X = new list[n];
+    for (int i = 0; i < n + 1; i++)
+    {
+        int v;
+        float x, c;
+        c = rand() % 100;
+        v = rand() % 100;
+        x = c / v;
+        if (i == 0)X[i].add(x, &X[n - 1], &X[i + 1]);
+        else if (i == n - 1)X[i].add(x, &X[i - 1], &X[0]);
+        else X[i].add(x, &X[i - 1], &X[i + 1]);
+    }
+    int i2 = 0;
+    float sum = 0;
+    for (int i = n; i > 1; i--)
+    {
+        sum += addition(&X[i2]) + i * X[i].showdata();
+        i2++;
+    }
+    cout << "sum :" << endl;
+    cout << sum;
+    X[0].deleteall(X); 
+}</li><ul></pre></code></div>
+
+<div ><p><h3><strong>Education</strong></p></h3>
+<span><p>I study at BSU</p></span></div>
+
+<div ><p><h3><strong>English level</strong></p></h3>
+<span><p>A2+</p></span></div>
+    </main>
+    <footer class="main-footer">
+    <div> <p style="color:#ffffff" > Created in 2021.<p>
+    <p style="color:#ffffff"><a href="https://github.com/sleeping-moon">My github</a></p>
+    <p><a href="https://rs.school/js/"><img src="https://rs.school/images/rs_school_js.svg" alt=":(((((" width="200" height="100"> </a>
+    </footer>
+  </body>
+</html>
