@@ -31,7 +31,7 @@ margin: auto;
   </head>
   <body >
     <header>
-      <h1 class="newcolor" >CV Alena Veremeenko </h1>
+      <h1 class="newcolor">CV Alena Veremeenko</h1>
     </header>
     <main class="center" >
      <div ><img src="https://sun9-49.userapi.com/impg/hm6P2-RMdyhXBy3F5WCLym_bAfVamkZHZbVmMQ/dWhIWErocAA.jpg?size=810x1080&quality=96&sign=266bcf987f937a3f7fa43bc713971890&type=album" alt=":(((((" width="274" height="350" class="leftimg" ></div>
@@ -49,9 +49,9 @@ margin: auto;
       <li>SOLID</li>
       <li>OOP</li></ul></div>
 
-      <div ><h3>Sample code</h3><ul>
-      <li><h4> Sample code on Java </h4>
-      <code><pre>package entity;
+      <div ><h3>Sample code</h3>
+      <h4> Sample code on Java</h4>
+      <pre><code>package entity;
 
 import java.io.Serializable; 
 import java.util.Calendar; 
@@ -140,118 +140,9 @@ public boolean equals(Object obj) {
     if (id != other.id)
         return false;
     return true;
-} }</li></pre></code>
+} }</code></pre>
 
-<li><h4>Sample code on C++ </h4>
-<pre><code>#include<time.h>
-
-using namespace std;
-
-class list
-{
-private:
-    class Node {
-        friend class list;
-        friend float addition(list* li);
-    private:
-        float data; 
-        Node* pptr;
-        Node* nptr;
-    public:
-        Node() {
-            (*this).data = 0;
-            (*this).pptr = NULL;
-            (*this).nptr = NULL;
-        }
-        Node(float data, Node* ptr,Node* next) {
-            (*this).data = data;
-            (*this).pptr = ptr;
-            (*this).nptr = next;
-        }
-    };
-    Node getnode;
-public:
-    void show()
-    {
-        Node* p;
-        p = &(*this).getnode;
-        do {
-            cout << (*p).data;
-            p = (*p).nptr;
-        } while ((*p).nptr != NULL);
-    }
-    void add(float data, list* last, list* next)
-    {
-        ((*this).getnode).data = data;
-        ((*this).getnode).pptr = &(*last).getnode;
-        ((*this).getnode).nptr = &(*next).getnode;
-    }
-    Node* search(float data)
-    {
-        Node* p;
-        p = &((*this).getnode);
-        do {
-            if ((*p).data == data) {
-                return p;
-            }
-            p = (*p).nptr;
-        } while ((*p).nptr != NULL);
-        return NULL;
-    }
-    char showdata()
-    {
-        return((*this).getnode).data;
-    }
-    void deleteo()
-    {
-        Node* f;
-        f = ((*this).getnode).pptr;
-        (*f).nptr = ((*this).getnode).nptr;
-        delete this;
-    }
-    void deleteall(list* p)
-    {
-        delete[] p;
-    }
-    friend float addition(list* li);
-};
-float addition(list* li)
-{
-    list p;
-    p.getnode = *((*li).getnode).nptr;
-    return (p.getnode).data + ((*li).getnode).data;
-}
-int main()
-{
-    srand(time(NULL));
-    setlocale(LC_ALL, "Russuan");
-    int size = 0, n;
-    int L2[100];
-    cout << "N:" << endl;
-    cin >> n;
-    list* X = new list[n];
-    for (int i = 0; i < n + 1; i++)
-    {
-        int v;
-        float x, c;
-        c = rand() % 100;
-        v = rand() % 100;
-        x = c / v;
-        if (i == 0)X[i].add(x, &X[n - 1], &X[i + 1]);
-        else if (i == n - 1)X[i].add(x, &X[i - 1], &X[0]);
-        else X[i].add(x, &X[i - 1], &X[i + 1]);
-    }
-    int i2 = 0;
-    float sum = 0;
-    for (int i = n; i > 1; i--)
-    {
-        sum += addition(&X[i2]) + i * X[i].showdata();
-        i2++;
-    }
-    cout << "sum :" << endl;
-    cout << sum;
-    X[0].deleteall(X); 
-}</li></ul></code></pre></div>
+</div>
 
 <div ><h3><strong>Education</strong></h3>
 <span>I study at BSU</span></div>
