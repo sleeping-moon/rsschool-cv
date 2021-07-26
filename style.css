@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>cvAV</title>
+<style>
+   .leftimg {
+    float:left; 
+    margin: 20px 20px 20px 20px; 
+   }
+   .center {
+    width: 650px; 
+    padding: 20px; 
+    margin: auto;
+    background:#ffffff;
+}
+   body{
+background:#76689a;
+}
+ .main-footer{
+width: 650px; 
+padding: 20px;
+margin: auto;
+}
+ .newcolor{
+  color:#ffffff;
+  text-align:center;
+}
+
+  </style>
+  </head>
+  <body >
+    <header>
+      <h1 class="newcolor">CV Alena Veremeenko</h1>
+    </header>
+    <main class="center" >
+     <div ><img src="https://sun9-49.userapi.com/impg/hm6P2-RMdyhXBy3F5WCLym_bAfVamkZHZbVmMQ/dWhIWErocAA.jpg?size=810x1080&quality=96&sign=266bcf987f937a3f7fa43bc713971890&type=album" alt=":(((((" width="274" height="350" class="leftimg" ></div>
+          
+     <div><h3>Contacts</h3><ul>
+      <li>email adress: alenaveremeenko2001@gmail.com</li>
+      <li>phone number: +37529577118</li></ul></div>
+
+      <div ><h3>About me</h3>
+      <article>I study at BSU, Faculty of Radiophysics and Computer Technologies. My strengths are quick learning,communication and desire to learn </article></div>
+
+      <div ><h3> Skills</h3><ul>
+      <li>Java</li>
+      <li> C++</li>
+      <li>SOLID</li>
+      <li>OOP</li></ul></div>
+
+      <div ><h3>Sample code</h3>
+      <h4> Sample code on Java</h4>
+      <pre><code>package entity;
+
+import java.io.Serializable; 
+import java.util.Calendar; 
+import java.util.Date;
+
+public class Ad implements Serializable, Identifiable {
+
+private static final long serialVersionUID = -1777984074044025486L;
+private int id = 0;
+private String subject = "";
+private String body = "";
+private int authorId;
+transient private User author;
+private Long lastModified;
+transient private Date lastModifiedDate;
+
+public Ad() {
+    lastModified = Calendar.getInstance().getTimeInMillis();
+}
+
+public int getId() {
+    return id;
+}
+
+public void setId(int id) {
+    this.id = id;
+}
+
+public String getSubject() {
+    return subject;
+}
+
+public void setSubject(String subject) {
+    this.subject = subject;
+}
+
+public String getBody() {
+    return body;
+}
+
+public void setBody(String body) {
+    this.body = body;
+}
+
+public int getAuthorId() {
+    return authorId;
+}
+
+public void setAuthorId(int authorId) {
+    this.authorId = authorId;
+}
+
+public User getAuthor() {
+    return author;
+}
+
+public void setAuthor(User author) {
+    this.author = author;
+}
+
+public Long getLastModified() {
+    return lastModified;
+}
+
+public void setLastModified(Long lastModified) {
+    this.lastModified = lastModified;
+    lastModifiedDate = new Date(lastModified);
+}
+
+public Date getLastModifiedDate() {
+    return lastModifiedDate;
+}
+
+public int hashCode() {
+    return id;
+}
+
+public boolean equals(Object obj) {
+    if (this == obj)
+        return true;
+    if (obj == null)
+        return false;
+    if (getClass() != obj.getClass())
+        return false;
+    Ad other = (Ad) obj;
+    if (id != other.id)
+        return false;
+    return true;
+} }</code></pre>
+
+</div>
+
+<div ><h3><strong>Education</strong></h3>
+<span>I study at BSU</span></div>
+
+<div><h3>English level</h3>
+<span>A2+</span></div>
+    </main>
+    <footer class="main-footer">
+    <div> <p style="color:#ffffff" > Created in 2021.<p>
+    <p style="color:#ffffff"><a href="https://github.com/sleeping-moon">My github</a></p>
+    <p><a href="https://rs.school/js/"><img src="https://rs.school/images/rs_school_js.svg" alt=":(((((" width="200" height="100"> </a>
+    </div>
+    </footer>
+  </body>
+</html>
