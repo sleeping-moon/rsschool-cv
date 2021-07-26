@@ -1,2 +1,2 @@
 # rsschool-cv
-https://sleeping-moon.github.io/rsschool-cv/cv
+https://sleeping-moon.github.io/rsschool-cv
